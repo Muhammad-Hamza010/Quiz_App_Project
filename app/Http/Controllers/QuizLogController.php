@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candidate;
 use App\Models\QuizLog;
+use Exception;
 use Illuminate\Http\Request;
 
 class QuizLogController extends Controller
@@ -83,4 +85,5 @@ class QuizLogController extends Controller
     {
         //
     }
+    
 }

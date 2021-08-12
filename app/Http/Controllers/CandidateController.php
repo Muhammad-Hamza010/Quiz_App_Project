@@ -119,8 +119,10 @@ class CandidateController extends Controller
                 return response('{No Record Found}', 404);
             }
             else{
+            $resetturnedin = $found->turnedinquiz = 0;
             $email = $found->email;
             $password = $found->password;
+            $found->save();
             
             $quizurl = URL::signedRoute('quiz',['email' => $email, 'password' => $password]);
                 

@@ -46,3 +46,7 @@ Route::post('/dashboard/generateurl', [CandidateController::class, 'generateurl'
 
 Route::get('/quiz/instructions', [QuizController::class, 'quizhome'])->name('quiz')->middleware('signed');
 
+// Route::get('/quiz/start', [QuizController::class, 'onstart'])->name('quizstart');
+
+Route::post('/quiz/submit', [QuizController::class, 'onSubmit'])->name('quizsubmit');
+
